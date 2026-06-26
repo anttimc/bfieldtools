@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "bfieldtools"
 description = "Open-source Python software for magnetic field modeling"
 readme = "README.rst"
-requires-python = ">=3.6"
+requires-python = ">=3.7"
 license = {text = "BSD-3-Clause"}
 maintainers = [
     {name = "Rasmus Zetter", email = "rasmus.zetter@aalto.fi"}
