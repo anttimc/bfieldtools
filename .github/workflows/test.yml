@@ -13,9 +13,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: 'Set up Python'
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v4
       with:
-        python-version: 3.8
+        python-version: '3.11'
     - name: 'Install Formatting checkers'
       run: |
         python -m pip install --upgrade pip
@@ -34,10 +34,10 @@ jobs:
     - run: ./tools/setup_xvfb.sh
       name: 'Setup xvfb'   
     - uses: actions/checkout@v2
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
+    - name: Set up Python
+      uses: actions/setup-python@v4
       with:
-        python-version: 3.8
+        python-version: '3.11'
     - name: 'Install dependencies'
       run: |
         pip install numpy scipy
