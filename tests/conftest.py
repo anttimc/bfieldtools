@@ -15,9 +15,9 @@ import os
 def configure_pyvista():
     """Configure PyVista for headless rendering during tests."""
     import pyvista as pv
-    
+
     # Check if interactive plotting is requested
-    enable_plotting = os.environ.get('BFIELDTOOLS_TEST_PLOT', '0') == '1'
+    enable_plotting = os.environ.get("BFIELDTOOLS_TEST_PLOT", "0") == "1"
 
     if not enable_plotting:
         # Set PyVista to use off-screen rendering (no interactive windows)
@@ -31,7 +31,7 @@ def configure_pyvista():
             pass
 
     yield
-    
+
     # Cleanup after all tests
     if not enable_plotting:
         pv.close_all()
