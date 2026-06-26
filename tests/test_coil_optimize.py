@@ -38,7 +38,7 @@ def test_coil_optimize():
                 # For now, test with all solvers that can handle SOC problems
                 for solver in [
                     i
-                    for i in cvxpy.solvers.defines.INSTALLED_CONIC_SOLVERS
+                    for i in cvxpy.installed_solvers()
                     if i not in ("GLPK", "GLPK_MI", "SCIPY")
                 ]:
                     results.append(
