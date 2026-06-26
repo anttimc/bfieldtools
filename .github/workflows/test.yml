@@ -40,12 +40,8 @@ jobs:
         python-version: '3.11'
     - name: 'Install dependencies'
       run: |
-        pip install numpy scipy
-        pip install vtk
-        pip install -r requirements.txt
-        pip install --upgrade "pytest<5.4" pytest-sugar pytest-cov pytest-mock pytest-timeout
-    - name: 'Install bfieldtools'
-      run: python setup.py install
+        python -m pip install --upgrade pip
+        pip install -e ".[dev]"
     - name: 'Run Pytest with xvfb'
       run: |
         pytest --cov=bfieldtools ./tests
