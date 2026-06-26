@@ -9,6 +9,18 @@ source .venv/bin/activate
 uv pip install -e .
 ```
 
+### Development Environment (with testing & formatting)
+```bash
+uv venv .venv --python 3.11
+source .venv/bin/activate
+uv pip install -e ".[dev]"
+```
+
+This installs the package with dev dependencies including:
+- `black==22.3.0` - Code formatting (matches CI)
+- `pytest` - Testing framework
+- Other testing utilities
+
 ### Documentation Environment
 ```bash
 uv venv .venv-docs --python 3.11
